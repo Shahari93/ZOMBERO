@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DataForCharacters : MonoBehaviour
 {
-    public float _movementSpeed;
     public int _damagePower;
     public int _health;
 
