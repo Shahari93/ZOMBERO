@@ -502,12 +502,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4412987285694750773}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1274927331 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4412987286629349590, guid: 0372eca117b362b48a4431fbe084aead,
-    type: 3}
-  m_PrefabInstance: {fileID: 4412987285694750773}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1718249007
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,99 +568,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1865459083
+--- !u!1 &1865459083 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1865459083, guid: 0372eca117b362b48a4431fbe084aead,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412987285694750773}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1865459084}
-  - component: {fileID: 1865459087}
-  - component: {fileID: 1865459086}
-  - component: {fileID: 1865459085}
-  m_Layer: 0
-  m_Name: Sword
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1865459084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865459083}
-  m_LocalRotation: {x: -0, y: 0.3271368, z: -0, w: 0.944977}
-  m_LocalPosition: {x: 0.587, y: 0, z: 0.5629997}
-  m_LocalScale: {x: 0.076111645, y: 0.16357894, z: 0.85848176}
-  m_Children: []
-  m_Father: {fileID: 1274927331}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 38.190002, z: 0}
---- !u!65 &1865459085
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865459083}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1865459086
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865459083}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1865459087
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865459083}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &3271700701293553218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -942,37 +849,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4412987286629349584, guid: 0372eca117b362b48a4431fbe084aead,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412987286629349584, guid: 0372eca117b362b48a4431fbe084aead,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412987286629349584, guid: 0372eca117b362b48a4431fbe084aead,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4412987286629349585, guid: 0372eca117b362b48a4431fbe084aead,
-        type: 3}
-      propertyPath: FloatingJoystick
-      value: 
-      objectReference: {fileID: 931792859}
     - target: {fileID: 4412987286629349585, guid: 0372eca117b362b48a4431fbe084aead,
         type: 3}
       propertyPath: floatingJoystick
       value: 
       objectReference: {fileID: 931792859}
-    - target: {fileID: 4412987286629349589, guid: 0372eca117b362b48a4431fbe084aead,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 272ab9f422683a34a9680474cc391e2e,
-        type: 2}
     - target: {fileID: 4412987286629349590, guid: 0372eca117b362b48a4431fbe084aead,
         type: 3}
       propertyPath: m_LocalPosition.x
