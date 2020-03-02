@@ -13,7 +13,7 @@ using UnityEngine;
 public class BulletMove : MonoBehaviour
 {
     [SerializeField] Vector3 _speed;
-    [SerializeField] GameObject bPrefab;
+    [SerializeField] GameObject bPrefab = null;
     private void FixedUpdate()
     {
         bPrefab.transform.Translate(_speed * Time.deltaTime);

@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
 
     [SerializeField] FloatingJoystick floatingJoystick = null;
-    [SerializeField] SwitchWeaponsButton weaponButton;
+    [SerializeField] SwitchWeaponsButton weaponButton = null;
     private void Update()
     {
         if(floatingJoystick.Vertical==0 && floatingJoystick.Horizontal==0)
