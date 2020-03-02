@@ -121,54 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &433889163
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 433889165}
-  - component: {fileID: 433889164}
-  m_Layer: 0
-  m_Name: BulletPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &433889164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433889163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcf50ff836dfd6429a04e25c7b8d195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - prefab: {fileID: 8757122437215777207, guid: 3419029f22fb1464bbed6e10a813bb55,
-      type: 3}
-    amount: 20
-  pooledItems: []
---- !u!4 &433889165
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433889163}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.54, y: 31.135, z: -40.473}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4fd66517221046af66a04efc15d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatingJoystick: {fileID: 931792859}
+  weaponButton: {fileID: 9105059915661604969}
 --- !u!1 &1718249007
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,6 +873,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
+--- !u!1001 &5594168798877697751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.2285
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -40.4511
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167962, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594168799293167964, guid: 4d59af4daeab35a47895a31ff123b4b6,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletPool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d59af4daeab35a47895a31ff123b4b6, type: 3}
 --- !u!1 &9105059915661604967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5997881785614589477, guid: 47897b6756618e745a3cb75c4c7051b0,

@@ -123,4 +123,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979e7fe103ce73241bfc4d0d349e0d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: {x: 0, y: 0, z: 7}
+  _speed: {x: 0, y: 0, z: 3}
+  bPrefab: {fileID: 8757122437215777207}

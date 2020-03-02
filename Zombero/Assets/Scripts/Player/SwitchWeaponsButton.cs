@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SwitchWeaponsButton : MonoBehaviour
 {
-    [SerializeField] GameObject rangeGO = null, meleeGO = null, swordGO = null;
+     public GameObject rangeGO = null, meleeGO = null, swordGO = null;
     private void Awake()
     {
         swordGO.SetActive(false);

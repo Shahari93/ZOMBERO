@@ -13,12 +13,11 @@ using UnityEngine;
 public class BulletMove : MonoBehaviour
 {
     [SerializeField] Vector3 _speed;
-    // Update is called once per frame
-    void FixedUpdate()
+    [SerializeField] GameObject bPrefab;
+    private void FixedUpdate()
     {
-        this.transform.Translate(_speed*Time.deltaTime); // game object rigidbody is set to kinematic. thats mean that the game object won't react to the physic engine
+        bPrefab.transform.Translate(_speed * Time.deltaTime);
     }
-
     private void OnBecameInvisible()
     {
         this.gameObject.SetActive(false); // setting the bullet to be inactive when they leave the screen. when the became invisable they go back to the object pool
