@@ -18,4 +18,9 @@ public class BulletMove : MonoBehaviour
     {
         this.transform.Translate(_speed*Time.deltaTime); // game object rigidbody is set to kinematic. thats mean that the game object won't react to the physic engine
     }
+
+    private void OnBecameInvisible()
+    {
+        this.gameObject.SetActive(false); // setting the bullet to be inactive when they leave the screen. when the became invisable they go back to the object pool
+    }
 }

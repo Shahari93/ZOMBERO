@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] GameObject _bullet = null;
+    //[SerializeField] GameObject _bullet = null;
     GameObject _bulletPrefab;
     private void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            _bulletPrefab = Instantiate(_bullet, this.transform.position, Quaternion.identity);
+            GameObject b = BulletPool.singleton.Get("PlayerBullet");
+            if(b!=null)
+            {
+                b.transform.position = this.transform.position;
+                b.SetActive(true);
+            }
         }
 
-        Destroy(_bulletPrefab,3f);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Hit");
-        if(other.gameObject.tag=="Finish")
-        {
-            Destroy(other.gameObject);
-        }
     }
 }
