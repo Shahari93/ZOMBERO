@@ -658,6 +658,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1055268905, guid: 47897b6756618e745a3cb75c4c7051b0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055268905, guid: 47897b6756618e745a3cb75c4c7051b0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055268905, guid: 47897b6756618e745a3cb75c4c7051b0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3271700702514908456, guid: 47897b6756618e745a3cb75c4c7051b0,
         type: 3}
       propertyPath: m_Name
@@ -768,6 +780,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5997881785614589480, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997881785614589480, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997881785614589480, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997881786266069060, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997881786266069060, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997881786266069060, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5997881786266069062, guid: 47897b6756618e745a3cb75c4c7051b0,
         type: 3}
       propertyPath: m_IsActive
@@ -786,7 +828,7 @@ PrefabInstance:
     - target: {fileID: 9105059915661604969, guid: 47897b6756618e745a3cb75c4c7051b0,
         type: 3}
       propertyPath: timer
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47897b6756618e745a3cb75c4c7051b0, type: 3}
