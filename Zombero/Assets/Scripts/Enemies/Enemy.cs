@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerBullet"))
         {
             other.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
             GameManager.Singleton.RemoveEnemies(this.gameObject); // when the enemy gets hit by the bullet we remove it from the list
         } 
     }

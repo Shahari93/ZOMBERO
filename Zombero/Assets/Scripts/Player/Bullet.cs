@@ -26,6 +26,7 @@ public class Bullet : MonoBehaviour
                     bullet.SetActive(false);
                 }
 
+
             }
         }
     }
