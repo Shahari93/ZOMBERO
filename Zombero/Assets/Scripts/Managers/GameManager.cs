@@ -38,7 +38,7 @@ public sealed class GameManager
         if(enemies.Count<=0)
         {
             door.gameObject.GetComponent<BoxCollider>().isTrigger = true;
-            door.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+            door.gameObject.GetComponent<MeshRenderer>().material.color = Color.red; // just for placeholder logic
         }
     }
 }
