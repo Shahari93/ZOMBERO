@@ -17,7 +17,7 @@ public class OpenDoor : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("scene1");
+            SceneManager.LoadScene("Zombero 1");
         }
     }*/
 }
