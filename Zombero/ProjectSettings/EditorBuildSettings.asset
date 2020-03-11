@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Zombero.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Zombero 1.unity
+    guid: 02e44d85c2d44484b8ed4404cef6fdc1
   m_configObjects: {}
