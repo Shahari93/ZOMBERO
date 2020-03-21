@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
         if(floatingJoystick.Vertical==0 && floatingJoystick.Horizontal==0)
         {
             GameObject bullet = BulletPool.singleton.Get("PlayerBullet");
-            if(Random.Range(0,101)<5)
+            if(Random.Range(0,151)<1)
             {
                 if(bullet!=null&& weaponButton.rangeGO.activeInHierarchy) // check the state of the weapon switch button. if active, player shoot. if not player stop shooting and use sword
                 {
