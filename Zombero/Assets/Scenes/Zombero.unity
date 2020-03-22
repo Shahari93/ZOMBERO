@@ -121,18 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &129783617 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6811344292014339505, guid: 0372eca117b362b48a4431fbe084aead,
-    type: 3}
-  m_PrefabInstance: {fileID: 4412987285694750773}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &178657268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -480,6 +468,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4412987285694750773}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1274927331 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4412987286629349585, guid: 0372eca117b362b48a4431fbe084aead,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412987285694750773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274927327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be4dc28ac8842a4f8d03cf87de47c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1718249007
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,18 +552,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4412987285694750773}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1865459084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865459083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c31543456f04184ebc8b816c1ce5944, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3271700701293553218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,10 +813,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1274927335, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
-      propertyPath: _healthBar
-      value: 
-      objectReference: {fileID: 129783617}
     - target: {fileID: 1424577783, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
       propertyPath: floatingJoystick
       value: 
@@ -907,6 +891,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5024544556454880957, guid: 0372eca117b362b48a4431fbe084aead,
+        type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 1274927331}
+    - target: {fileID: 8189898042309673003, guid: 0372eca117b362b48a4431fbe084aead,
+        type: 3}
+      propertyPath: _machete
+      value: 
+      objectReference: {fileID: 1865459083}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
 --- !u!1001 &5594168798877697751

@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] FloatingJoystick floatingJoystick = null;
     [SerializeField] Rigidbody rb = null;
-    [SerializeField] float movementSpeed = 5.0f;
+    [SerializeField] public float movementSpeed = 5.0f;
     [SerializeField] float rotationSpeed = 50f;
     private Vector3 dir;
 
