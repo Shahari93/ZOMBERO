@@ -8,6 +8,7 @@ public class SwitchWeaponsButton : MonoBehaviour
     public GameObject rangeGO = null, meleeGO = null, swordGO = null;
     [SerializeField]float timer;
     [SerializeField]bool isTimerActive = false;
+    [SerializeField] Machete _macheteScript = null;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class SwitchWeaponsButton : MonoBehaviour
             rangeGO.SetActive(false);
             meleeGO.SetActive(true);
             swordGO.SetActive(true);
+            _macheteScript.MacheteLogic();
             SetColor();
         }
         else if(meleeGO.activeInHierarchy)
