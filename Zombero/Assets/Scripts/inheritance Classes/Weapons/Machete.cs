@@ -6,14 +6,9 @@ using UnityEngine;
 /// </summary>
 public class Machete : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
    public void MacheteLogic()
     {
         Debug.Log("sd");
+        FindObjectOfType<PlayerMovement>()._playerMovement -= 2;
     }
 }

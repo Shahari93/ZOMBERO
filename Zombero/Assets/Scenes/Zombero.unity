@@ -1044,6 +1044,11 @@ PrefabInstance:
       propertyPath: switchWeapons
       value: 
       objectReference: {fileID: 9105059915661604969}
+    - target: {fileID: 8189898042309673003, guid: 0372eca117b362b48a4431fbe084aead,
+        type: 3}
+      propertyPath: pm
+      value: 
+      objectReference: {fileID: 1274927331}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
 --- !u!1001 &5594168798877697751

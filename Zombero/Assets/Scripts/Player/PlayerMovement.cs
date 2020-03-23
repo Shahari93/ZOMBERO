@@ -6,8 +6,6 @@ public class PlayerMovement : StatsManager
 {
     [SerializeField] FloatingJoystick floatingJoystick = null;
     [SerializeField] Rigidbody rb = null;
-    //[SerializeField] public float movementSpeed = 5.0f;
-    //[SerializeField] float rotationSpeed = 50f;
     private Vector3 dir;
 
     void Start()

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SwitchWeaponsButton : MonoBehaviour
+public class SwitchWeaponsButton : Machete
 {
     public GameObject rangeGO = null, meleeGO = null, swordGO = null;
     [SerializeField]float timer;
     [SerializeField]bool isTimerActive = false;
-    [SerializeField] Machete _macheteScript = null;
-
+    //[SerializeField] Machete machete = null;
     private void Awake()
     {
         swordGO.SetActive(false);
@@ -42,7 +41,7 @@ public class SwitchWeaponsButton : MonoBehaviour
             rangeGO.SetActive(false);
             meleeGO.SetActive(true);
             swordGO.SetActive(true);
-            _macheteScript.MacheteLogic();
+            MacheteLogic();
             SetColor();
         }
         else if(meleeGO.activeInHierarchy)
@@ -66,7 +65,6 @@ public class SwitchWeaponsButton : MonoBehaviour
             ActivateTimer();
         }
     }
-
     void ActivateTimer()
     {
         isTimerActive = true;
