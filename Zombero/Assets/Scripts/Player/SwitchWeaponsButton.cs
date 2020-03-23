@@ -49,6 +49,7 @@ public class SwitchWeaponsButton : Machete
             rangeGO.SetActive(true);
             meleeGO.SetActive(false);
             swordGO.SetActive(false);
+            NonMachete();
             SetColor();
         }
     }

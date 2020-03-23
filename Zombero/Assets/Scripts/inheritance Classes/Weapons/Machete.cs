@@ -8,7 +8,10 @@ public class Machete : MonoBehaviour
 {
    public void MacheteLogic()
     {
-        Debug.Log("sd");
         FindObjectOfType<PlayerMovement>()._playerMovement -= 2;
+    }
+    public void NonMachete()
+    {
+        FindObjectOfType<PlayerMovement>()._playerMovement += 2;
     }
 }

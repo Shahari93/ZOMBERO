@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4819098783476643798, guid: 0c34b5625bbeebd4cbf2d1fa111c7bf2,
+        type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4819098783476643799, guid: 0c34b5625bbeebd4cbf2d1fa111c7bf2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -405,6 +410,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy1
       objectReference: {fileID: 0}
+    - target: {fileID: 4819098783476643798, guid: 0c34b5625bbeebd4cbf2d1fa111c7bf2,
+        type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4819098783476643799, guid: 0c34b5625bbeebd4cbf2d1fa111c7bf2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -499,7 +509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1302244254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,6 +958,14 @@ PrefabInstance:
     - target: {fileID: 1865459083, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865459083, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
+      propertyPath: m_TagString
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865459085, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4412987286629349585, guid: 0372eca117b362b48a4431fbe084aead,
         type: 3}
