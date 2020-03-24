@@ -24,7 +24,6 @@ public class Enemy : MonoBehaviour
             RemoveWhenHealthLow();
         }
     }
-
     void RemoveWhenHealthLow()
     {
         if (health <= 0)

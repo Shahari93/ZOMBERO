@@ -32,7 +32,7 @@ public class PlayerMovement : StatsManager
         rb.MovePosition(transform.position + _playerMovement * Time.deltaTime * dir);// player movement.
     }
 
-    void FindEnemy()
+    public void FindEnemy()
     {
         float disToClosestEnemy = Mathf.Infinity;
         GameObject closestEnemy = null; // no closestEnemy at the start of the game

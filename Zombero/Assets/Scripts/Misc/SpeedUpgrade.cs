@@ -11,7 +11,7 @@ public class SpeedUpgrade : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            pm._playerMovement += 5;
+            pm._playerMovement += 2;
             Debug.Log("Player");
             StartCoroutine(DestroyMyself());
         }
