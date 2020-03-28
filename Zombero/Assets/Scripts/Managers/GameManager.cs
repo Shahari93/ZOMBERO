@@ -38,7 +38,14 @@ public sealed class GameManager
         if(enemies.Count<=0)
         {
             door.gameObject.GetComponent<BoxCollider>().isTrigger = true;
-            door.gameObject.GetComponent<MeshRenderer>().material.color = Color.red; // just for placeholder logic
+        }
+    }
+
+    public void AllEnemiesAreDead(GameObject sword)//for cancling the machete animation
+    {
+        if(enemies.Count<=0)
+        {
+            sword.gameObject.GetComponent<Animator>().SetBool("isEnemyClose", false);
         }
     }
 }

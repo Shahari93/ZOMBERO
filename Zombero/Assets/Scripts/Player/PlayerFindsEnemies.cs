@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerFindsEnemies : MonoBehaviour, IFindEnemies
 {
-    private Vector3 dir;
+    private Vector3 dir = new Vector3(0,0,0);
 
     void FixedUpdate()
     {

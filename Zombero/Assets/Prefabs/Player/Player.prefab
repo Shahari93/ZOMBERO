@@ -107,13 +107,14 @@ GameObject:
   - component: {fileID: 1865459086}
   - component: {fileID: 1865459085}
   - component: {fileID: 8189898042309673003}
+  - component: {fileID: 8938463368182080171}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1865459084
 Transform:
   m_ObjectHideFlags: 0
@@ -121,13 +122,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865459083}
-  m_LocalRotation: {x: -0, y: 0.3271368, z: -0, w: 0.944977}
-  m_LocalPosition: {x: 0.884, y: 0, z: 0.92}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.417, y: 0, z: 0.92}
   m_LocalScale: {x: 0.076111645, y: 0.16357894, z: 1.2985395}
   m_Children: []
   m_Father: {fileID: 4412987286629349590}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 38.190002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1865459087
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -200,6 +201,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf60639f0434ee40a08c1b68d0ddb89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8938463368182080171
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865459083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 39713fa732a30c148adb846e31de6308, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &832876396122679517
 GameObject:
   m_ObjectHideFlags: 0

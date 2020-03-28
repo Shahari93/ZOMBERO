@@ -6,10 +6,17 @@ using UnityEngine;
 /// </summary>
 public class Machete : MonoBehaviour, IFindEnemies
 {
+    Animator _macheteAnimator;
+    private void Start()
+    {
+        _macheteAnimator = gameObject.GetComponent<Animator>();
+    }
 
     private void Update()
     {
         FindEnemies();
+        GameManager.Singleton.AllEnemiesAreDead(this.gameObject); // uses the game manager method to stop the machete animation when there are no enemies on screen.
+
     }
 
     public void FindEnemies()
@@ -26,14 +33,15 @@ public class Machete : MonoBehaviour, IFindEnemies
                 closestEnemy = enemy;
                 if (disToEnemy < 3)
                 {
+                    _macheteAnimator.SetBool("isEnemyClose", true);
                     Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color = Color.red;
                 }
                 else if (disToEnemy>=3)
                 {
+                    _macheteAnimator.SetBool("isEnemyClose", false);
                     Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color = Color.blue;
                 }
             }
-
         }
     }
 }
