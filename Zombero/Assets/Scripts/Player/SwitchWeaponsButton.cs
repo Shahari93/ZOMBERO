@@ -41,7 +41,7 @@ public class SwitchWeaponsButton : Machete
             rangeGO.SetActive(false);
             meleeGO.SetActive(true);
             swordGO.SetActive(true);
-            MacheteLogic();
+            FindObjectOfType<PlayerMovement>()._playerMovement -= 2;
             SetColor();
         }
         else if(meleeGO.activeInHierarchy)
@@ -49,7 +49,7 @@ public class SwitchWeaponsButton : Machete
             rangeGO.SetActive(true);
             meleeGO.SetActive(false);
             swordGO.SetActive(false);
-            NonMachete();
+            FindObjectOfType<PlayerMovement>()._playerMovement += 2;
             SetColor();
         }
     }

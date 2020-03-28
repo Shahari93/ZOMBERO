@@ -4,29 +4,36 @@ using UnityEngine;
 /// <summary>
 /// the methods in this script will be called from the weapon switch class
 /// </summary>
-public class Machete : MonoBehaviour
+public class Machete : MonoBehaviour, IFindEnemies
 {
-    public void MacheteLogic()
+
+    private void Update()
     {
-        FindObjectOfType<PlayerMovement>()._playerMovement -= 2;
-        CloseEnemy();
-    }
-    public void NonMachete()
-    {
-        FindObjectOfType<PlayerMovement>()._playerMovement += 2;
+        FindEnemies();
     }
 
-    void CloseEnemy()
+    public void FindEnemies()
     {
-        float disToCloseEnemy = Mathf.Infinity;
+        float disToClosestEnemy = Mathf.Infinity;
         GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy"); // create an array of all the gameobjects with the Enemy tag in the scene
+        GameObject closestEnemy = null; // Empty GameObject for keeping the closest enemy from the array
         foreach (GameObject enemy in allEnemies) // looping on every enemy in that array
         {
             float disToEnemy = (enemy.transform.position - this.transform.position).sqrMagnitude;
-            if (disToEnemy < disToCloseEnemy)
+            if (disToEnemy < disToClosestEnemy)
             {
-                Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color= Color.red;
+                disToClosestEnemy = disToEnemy;
+                closestEnemy = enemy;
+                if (disToEnemy < 3)
+                {
+                    Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color = Color.red;
+                }
+                else if (disToEnemy>=3)
+                {
+                    Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color = Color.blue;
+                }
             }
+
         }
     }
 }
