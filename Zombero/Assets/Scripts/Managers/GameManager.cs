@@ -43,7 +43,7 @@ public sealed class GameManager
 
     public void AllEnemiesAreDead(GameObject sword)//for cancling the machete animation
     {
-        if(enemies.Count<=0)
+        if (enemies.Count <= 0)
         {
             sword.gameObject.GetComponent<Animator>().SetBool("isEnemyClose", false);
         }
