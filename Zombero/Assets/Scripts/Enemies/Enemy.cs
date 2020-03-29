@@ -15,14 +15,14 @@ public class Enemy : MonoBehaviour
         {
             health -= 5;
             other.gameObject.SetActive(false);
-            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.green, 1f, .5f));
+            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             RemoveWhenHealthLow();
         }
 
         if (other.gameObject.CompareTag("Sword"))
         {
             health -= 15;
-            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.green, 1f, .5f));
+            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             RemoveWhenHealthLow();
         }
     }
