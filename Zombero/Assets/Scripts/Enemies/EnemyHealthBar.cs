@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class EnemyHealthBar : MonoBehaviour
+{
+    [SerializeField] private Image foregroundImage = null;
+    [SerializeField] private float updateSpeedSeconds = .5f;
+    private void Awake()
+    {
+        GetComponentInParent<EnemyHealth>().OnHealthPctChanged += HandleHealthChanged;
+    }
+
+    private void HandleHealthChanged(float pct)
+    {
+        StartCoroutine(ChangeToPct(pct));
+    }
+
+    private IEnumerator ChangeToPct(float pct)
+    {
+        float preChangePct = foregroundImage.fillAmount;
+        float elapsed = 0f;
+
+        while(elapsed<updateSpeedSeconds)
+        {
+            elapsed += Time.deltaTime;
+            foregroundImage.fillAmount = Mathf.Lerp(preChangePct, pct, elapsed / updateSpeedSeconds);
+            yield return null;
+        }
+
+        foregroundImage.fillAmount = pct;
+    }
+}
