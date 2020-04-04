@@ -11,10 +11,5 @@ public class EnemyWalker : EnemyAI
 
     public override void Attack()
     {
-        //StartCoroutine(AttackLogic());
     }
-    /*IEnumerator AttackLogic()
-    {
-        
-    }*/
 }
