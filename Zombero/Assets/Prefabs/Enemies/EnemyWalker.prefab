@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1422447277595805323}
   - component: {fileID: 5862961640615233882}
   - component: {fileID: 2859565857866311269}
-  - component: {fileID: 7741294100394553577}
+  - component: {fileID: 6913486251728209911}
   m_Layer: 0
   m_Name: EnemyWalker
   m_TagString: Enemy
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   currentHealth: 0
---- !u!114 &7741294100394553577
+--- !u!114 &6913486251728209911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1422447277595805326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4459cdb1dca3ebe4fb68e6187e3eca26, type: 3}
+  m_Script: {fileID: 11500000, guid: 1afe0cb09b3dc544080712dcb710313b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6928363203159223412

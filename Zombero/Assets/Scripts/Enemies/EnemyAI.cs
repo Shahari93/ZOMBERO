@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public abstract class EnemyAI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int speed;
+    public int attackSpeed;
+    public int attackDamage;
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Attack()
     {
-        
+
     }
 }
