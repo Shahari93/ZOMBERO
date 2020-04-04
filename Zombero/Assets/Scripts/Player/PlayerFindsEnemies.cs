@@ -26,11 +26,6 @@ public class PlayerFindsEnemies : MonoBehaviour, IFindEnemies
                 if (closestEnemy.transform.position.y >= 0.0f || closestEnemy.transform.position.y <= 1f) // only if the target highet is equle to this y value the player will shoot at him. if not the player will still target the enemy but WILL NOT shoot at him
                 {
                     this.transform.LookAt(closestEnemy.transform);
-
-                    /*if (dir == Vector3.zero)
-                    {
-                        this.transform.LookAt(enemy.transform.position); // will look at enemy only if there is no movement
-                    }*/
                 }
             }
         }

@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
             GameObject bullet = BulletPool.singleton.Get("PlayerBullet");
             if(Random.Range(0,151)<2)
             {
-                if(bullet!=null&& weaponButton.rangeGO.activeInHierarchy) // check the state of the weapon switch button. if active, player shoot. if not player stop shooting and use sword
+                if (bullet != null && weaponButton.rangeGO.activeInHierarchy) // check the state of the weapon switch button. if active, player shoot. if not player stop shooting and use sword
                 {
                     bullet.transform.position = this.transform.position;
                     bullet.transform.eulerAngles = this.transform.parent.eulerAngles; // takes to rotation angle of the parent object

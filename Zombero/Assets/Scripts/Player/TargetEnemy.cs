@@ -16,7 +16,6 @@ public class TargetEnemy : MonoBehaviour
         Enemy enemy = FindObjectsOfType<Enemy>().OrderBy(t => Vector3.Distance(transform.position, t.transform.position)).FirstOrDefault();
         if(enemy!=null)
         {
-            
         }
     }
 }

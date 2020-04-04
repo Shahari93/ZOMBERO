@@ -12,6 +12,7 @@ public class HealthBar : MonoBehaviour
 
     private void Awake()
     {
+        current = _health;
         healthText.text = current.ToString();
     }
 

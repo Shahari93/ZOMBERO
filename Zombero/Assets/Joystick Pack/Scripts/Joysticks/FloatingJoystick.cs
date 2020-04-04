@@ -21,7 +21,7 @@ public class FloatingJoystick : Joystick
     public override void OnPointerUp(PointerEventData eventData)
     {
         //background.gameObject.SetActive(false);
-        background.anchoredPosition3D = new Vector3(529, 129, 0);
+        background.anchoredPosition3D = new Vector3(529, 129, 0); // returns the joystick to his position after the player used it
         base.OnPointerUp(eventData);
     }
 }
