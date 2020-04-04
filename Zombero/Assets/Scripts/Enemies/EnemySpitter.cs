@@ -6,7 +6,6 @@ public class EnemySpitter : EnemyAI
 {
     PlayerMovement pm = null;
     [SerializeField] private float timer = 0f;
-    private bool isTimerOn = false;
     private bool isLooking = true;
     void Awake()
     {
@@ -35,20 +34,5 @@ public class EnemySpitter : EnemyAI
         }
         yield return new WaitForSeconds(timer);
         isLooking = true;
-    }
-
-    void TimerForEnemy()
-    {
-        if(isTimerOn)
-        {
-            timer -= Time.deltaTime;
-            
-            if(timer<=0)
-            {
-                timer = 0;
-                isTimerOn = false; 
-                Debug.Log("Timer is off");
-            }
-        }
     }
 }
