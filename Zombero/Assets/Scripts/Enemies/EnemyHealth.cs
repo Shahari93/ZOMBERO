@@ -20,13 +20,13 @@ public class EnemyHealth : Enemy
         OnHealthPctChanged(currentHealthPct);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other) // dealing with getting hit from stuff
     {
         if (other.gameObject.CompareTag("PlayerBullet"))
         {
             ModifyHealth(-5);
             other.gameObject.SetActive(false);
-            StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
+            StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             RemoveWhenHealthLow();
         }
 

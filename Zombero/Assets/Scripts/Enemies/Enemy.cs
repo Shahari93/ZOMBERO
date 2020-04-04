@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health;
-    public int currentHealth;
+    [HideInInspector]public int health;
+    [HideInInspector]public int currentHealth;
     private void Awake()
     {
         GameManager.Singleton.AddEnemies(this.gameObject); // here we add all the enemies into a list.

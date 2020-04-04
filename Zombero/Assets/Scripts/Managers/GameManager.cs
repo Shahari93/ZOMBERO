@@ -30,7 +30,7 @@ public sealed class GameManager
     {
         int index = enemies.IndexOf(enemy);
         enemies.RemoveAt(index);
-        GameObject.Destroy(enemy);
+        enemy.SetActive(false);
     }
 
     public void OpenDoors(GameObject door)

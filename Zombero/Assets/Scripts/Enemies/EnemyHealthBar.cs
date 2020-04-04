@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class EnemyHealthBar : MonoBehaviour
 {
     [SerializeField] private Image foregroundImage = null;
-    [SerializeField] private float updateSpeedSeconds = .5f;
+    [SerializeField] private float updateSpeedSeconds = .2f;
     private void Awake()
     {
         GetComponentInParent<EnemyHealth>().OnHealthPctChanged += HandleHealthChanged;

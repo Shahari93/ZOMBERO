@@ -23,7 +23,9 @@ public class EnemyFlash : MonoBehaviour
                 newColor = flashColor;
             }
         }
-        if(this.gameObject!=null)
-        this.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+        if(gameObject!=null)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+        }
     }
 }
