@@ -26,7 +26,6 @@ public class TargetEnemy : MonoBehaviour
     {
         if(enemy == null)
         {
-            Debug.Log("A");
             return;
         }
         enemy.GetComponent<MeshRenderer>().material.color = Color.white;

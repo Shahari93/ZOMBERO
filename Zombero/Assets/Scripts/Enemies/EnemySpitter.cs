@@ -15,6 +15,7 @@ public class EnemySpitter : EnemyAI
     private void Update()
     {
         Attack();
+        Debug.Log(timer);
     }
 
     public override void Attack()
@@ -30,7 +31,7 @@ public class EnemySpitter : EnemyAI
             yield return new WaitForSeconds(timer);
             isLooking = false;
             Debug.Log("Attack");
-            timer = 3;
+            timer = 3f;
         }
         yield return new WaitForSeconds(timer);
         isLooking = true;
