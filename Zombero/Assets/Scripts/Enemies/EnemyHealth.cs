@@ -26,14 +26,14 @@ public class EnemyHealth : Enemy
         {
             ModifyHealth(-5);
             other.gameObject.SetActive(false);
-            StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
-           RemoveWhenHealthLow();
+            //StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
+            RemoveWhenHealthLow();
         }
 
         if (other.gameObject.CompareTag("Sword"))
         {
             ModifyHealth(-15);
-            StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
+            //StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
             RemoveWhenHealthLow();
         }
     }

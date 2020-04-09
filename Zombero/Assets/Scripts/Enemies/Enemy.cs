@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [HideInInspector]public int health;
+    [HideInInspector]public int health = 100;
     [HideInInspector]public int currentHealth;
     private void Awake()
     {

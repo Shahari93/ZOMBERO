@@ -28,13 +28,13 @@ public class TargetEnemy : MonoBehaviour
         {
             return;
         }
-        enemy.GetComponent<MeshRenderer>().material.color = Color.white;
+        //enemy.GetComponent<MeshRenderer>().material.color = Color.white;
     }
 
     private void EnableTarged(Enemy enemy)
     {
         DisableTargeted(lastTargetEnemy);
-        enemy.GetComponent<MeshRenderer>().material.color = Color.green;
+        //enemy.GetComponent<MeshRenderer>().material.color = Color.green;
         lastTargetEnemy = enemy;
     }
 }

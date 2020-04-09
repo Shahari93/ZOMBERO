@@ -11,5 +11,6 @@ public class EnemyWalker : EnemyAI
 
     public override void Attack()
     {
+        transform.position -= transform.forward * speed * Time.deltaTime;
     }
 }
