@@ -5,9 +5,7 @@ using UnityEngine;
 public abstract class EnemyAI : MonoBehaviour
 {
     public float speed;
-    public int attackSpeed;
-    public int attackDamage;
-
+    public float attackSpeed;
     public virtual void Attack()
     {
 

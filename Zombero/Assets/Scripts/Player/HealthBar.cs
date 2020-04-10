@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
     if(collision.gameObject.CompareTag("Enemy"))
         {
             StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
-            PlayerDamageDealt(15);
+            PlayerDamageDealt(Random.Range(3,16));
         } 
     }
 

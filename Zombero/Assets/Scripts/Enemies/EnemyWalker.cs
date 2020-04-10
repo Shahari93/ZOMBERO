@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class EnemyWalker : EnemyAI
 {
+    [SerializeField] private Transform player = null;
+    [SerializeField] private Animator enemyAnimator = null;
+    [SerializeField] private float stoppingDis = 1.5f;
+
     private void Update()
     {
         Attack();        
@@ -11,6 +16,15 @@ public class EnemyWalker : EnemyAI
 
     public override void Attack()
     {
-        transform.position -= transform.forward * speed * Time.deltaTime;
+        this.transform.LookAt(player.transform);
+        if(Vector3.Distance(this.transform.position, player.position)>stoppingDis)
+        { 
+            transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position,speed * Time.deltaTime);
+            enemyAnimator.SetBool("isClose", false);
+        }
+        if(Vector3.Distance(this.transform.position,player.position)<=stoppingDis)
+        {
+            enemyAnimator.SetBool("isClose", true);
+        }
     }
 }
