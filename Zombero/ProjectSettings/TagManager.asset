@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - door
   - Sword
+  - HandCollider
   layers:
   - Default
   - TransparentFX
