@@ -572,7 +572,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 112237166}
+      objectReference: {fileID: 1392545015}
     - target: {fileID: 4108463893067538019, guid: eaeee53c90e5b8a4980ceed2a1ce827e,
         type: 3}
       propertyPath: stoppingDis
@@ -1317,6 +1317,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 112237165}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2039740961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5539520506884688604, guid: ca9b0bc734ddff3428e9be32034b5629,
+    type: 3}
+  m_PrefabInstance: {fileID: 990230647157825554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &990230647157825554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1400,6 +1406,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1994603721485493620, guid: 0c2fdc1722c050b4e946c4f8ad10a8f1,
         type: 3}
+    - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
+        type: 3}
+      propertyPath: bulletPoint
+      value: 
+      objectReference: {fileID: 2039740961}
+    - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
+        type: 3}
+      propertyPath: attackSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 990230645361355103, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: m_Name
@@ -1711,7 +1727,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 112237166}
+      objectReference: {fileID: 1392545015}
     - target: {fileID: 4108463893067538019, guid: eaeee53c90e5b8a4980ceed2a1ce827e,
         type: 3}
       propertyPath: stoppingDis

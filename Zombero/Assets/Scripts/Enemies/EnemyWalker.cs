@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyWalker : EnemyAI
 {
-    [SerializeField] private Transform player = null;
+    [SerializeField] private GameObject player = null;
     [SerializeField] private Animator enemyAnimator = null;
     [SerializeField] private float stoppingDis = 1.5f;
 
@@ -17,12 +17,12 @@ public class EnemyWalker : EnemyAI
     public override void Attack()
     {
         this.transform.LookAt(player.transform);
-        if(Vector3.Distance(this.transform.position, player.position)>stoppingDis)
+        if(Vector3.Distance(this.transform.position, player.transform.position)>stoppingDis)
         { 
             transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position,speed * Time.deltaTime);
             enemyAnimator.SetBool("isClose", false);
         }
-        if(Vector3.Distance(this.transform.position,player.position)<=stoppingDis)
+        if(Vector3.Distance(this.transform.position,player.transform.position)<=stoppingDis)
         {
             enemyAnimator.SetBool("isClose", true);
         }

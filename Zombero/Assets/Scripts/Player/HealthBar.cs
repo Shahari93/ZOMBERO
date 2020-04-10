@@ -24,6 +24,15 @@ public class HealthBar : MonoBehaviour
         } 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("HandCollider"))
+        {
+            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
+            PlayerDamageDealt(Random.Range(5, 11));
+        }
+    }
+
     public void PlayerDamageDealt(int _howMuchDamage) // can be used for the player and npc
     {
              float fillAmount = (float)current / (float)_health;
