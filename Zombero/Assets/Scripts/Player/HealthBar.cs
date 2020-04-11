@@ -31,6 +31,12 @@ public class HealthBar : MonoBehaviour
             StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             PlayerDamageDealt(Random.Range(5, 11));
         }
+        if(other.gameObject.CompareTag("EnemyBullet"))
+        {
+            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
+            PlayerDamageDealt(Random.Range(5, 11));
+            Destroy(other.gameObject);
+        }
     }
 
     public void PlayerDamageDealt(int _howMuchDamage) // can be used for the player and npc
