@@ -9,6 +9,7 @@ TagManager:
   - door
   - Sword
   - HandCollider
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

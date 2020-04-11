@@ -35,7 +35,7 @@ public class EnemySpitter : EnemyAI
                 bulletClone = Instantiate(bullet, bulletPoint.position, bullet.transform.rotation);
                 isFired = true;
             }
-            Destroy(bulletClone,5);
+            Destroy(bulletClone,20);
             isLooking = false;
         }
         yield return new WaitForSeconds(3f);

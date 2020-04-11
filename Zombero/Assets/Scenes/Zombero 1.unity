@@ -228,6 +228,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 112237165}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &290199613 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2929291398622258230, guid: ca9b0bc734ddff3428e9be32034b5629,
+    type: 3}
+  m_PrefabInstance: {fileID: 1422773908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &492961847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5997881785614589477, guid: 47897b6756618e745a3cb75c4c7051b0,
@@ -615,13 +621,13 @@ PrefabInstance:
     - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: attackSpeed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: bulletPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 290199613}
     - target: {fileID: 990230645361355103, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: m_Name
@@ -630,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 990230645361355103, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b0bc734ddff3428e9be32034b5629, type: 3}
@@ -700,6 +706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ZombieWalkerGameObject (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108463893067538017, guid: eaeee53c90e5b8a4980ceed2a1ce827e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4108463893067538019, guid: eaeee53c90e5b8a4980ceed2a1ce827e,
         type: 3}
@@ -876,7 +887,7 @@ PrefabInstance:
     - target: {fileID: 990230645361355100, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.47
+      value: -32.52
       objectReference: {fileID: 0}
     - target: {fileID: 990230645361355100, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
@@ -926,7 +937,7 @@ PrefabInstance:
     - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: attackSpeed
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
@@ -1239,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108463893067538017, guid: eaeee53c90e5b8a4980ceed2a1ce827e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4108463893067538019, guid: eaeee53c90e5b8a4980ceed2a1ce827e,
         type: 3}
