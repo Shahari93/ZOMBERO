@@ -8,8 +8,7 @@ public class SwitchWeaponsButton : Machete
     public GameObject rangeGO = null, meleeGO = null, swordGO = null;
     [SerializeField]float timer;
     [SerializeField]bool isTimerActive = false;
-    [SerializeField] AudioSource audioSource;
-    //[SerializeField] Machete machete = null;
+    [SerializeField] AudioSource audioSource = null;
     private void Awake()
     {
         swordGO.SetActive(false);
