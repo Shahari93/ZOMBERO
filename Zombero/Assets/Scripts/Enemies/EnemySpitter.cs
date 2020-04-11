@@ -4,38 +4,39 @@ using UnityEngine;
 
 public class EnemySpitter : EnemyAI
 {
+    GameObject bulletClone;
     [SerializeField] Transform player = null;
-    [SerializeField] private float timer = 0f;
+    [SerializeField] GameObject bullet = null;
+    [SerializeField] Transform bulletPoint = null;
+    [SerializeField] private float timer = 3f;
     private bool isLooking = true;
 
-    //[SerializeField] GameObject bullet = null;
-    //[SerializeField] GameObject bulletPoint = null;
-    /*private void Awake()
+    private void Start()
     {
         bullet.transform.eulerAngles = new Vector3(90, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
-    }*/
-
-    private void Update()
-    {
-        Attack();
     }
 
-    public override void Attack()
+    private void Update()
     {
         StartCoroutine(Spit());
     }
 
+    public override void Attack()
+    {
+    }
     private IEnumerator Spit()
     {
-        if(isLooking)
+        if (isLooking)
         {
             this.transform.LookAt(player.transform);
             yield return new WaitForSeconds(timer);
+            bulletClone = Instantiate(bullet, bulletPoint.position, bullet.transform.rotation);
             isLooking = false;
             timer = 3f;
+            Destroy(bulletClone,5);
+            yield return new WaitForSecondsRealtime(6);
         }
         yield return new WaitForSeconds(timer);
         isLooking = true;
-        
     }
 }

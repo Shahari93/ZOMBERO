@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &51790597 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9057884649626606713, guid: ca9b0bc734ddff3428e9be32034b5629,
-    type: 3}
-  m_PrefabInstance: {fileID: 990230647157825554}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &112237165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +330,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &600107510 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2929291398622258230, guid: ca9b0bc734ddff3428e9be32034b5629,
+    type: 3}
+  m_PrefabInstance: {fileID: 990230647157825554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,12 +539,6 @@ MonoBehaviour:
   _player: {fileID: 1392545015}
   _yOffset: 24.24
   _zOffset: -16.33
---- !u!4 &1026570603 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9057884649626606713, guid: ca9b0bc734ddff3428e9be32034b5629,
-    type: 3}
-  m_PrefabInstance: {fileID: 1422773908}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1392545015 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4412987286629349610, guid: 0372eca117b362b48a4431fbe084aead,
@@ -627,7 +621,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPoint
       value: 
-      objectReference: {fileID: 1026570603}
+      objectReference: {fileID: 0}
     - target: {fileID: 990230645361355103, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: m_Name
@@ -932,13 +926,18 @@ PrefabInstance:
     - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: attackSpeed
-      value: 80
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: bulletPoint
       value: 
-      objectReference: {fileID: 51790597}
+      objectReference: {fileID: 600107510}
+    - target: {fileID: 990230645361355101, guid: ca9b0bc734ddff3428e9be32034b5629,
+        type: 3}
+      propertyPath: timer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 990230645361355103, guid: ca9b0bc734ddff3428e9be32034b5629,
         type: 3}
       propertyPath: m_Name
