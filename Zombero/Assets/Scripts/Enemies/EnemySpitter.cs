@@ -8,8 +8,8 @@ public class EnemySpitter : EnemyAI
     [SerializeField] Transform player = null;
     [SerializeField] GameObject bullet = null;
     [SerializeField] Transform bulletPoint = null;
-    [SerializeField] private float timer = 3f;
     private bool isLooking = true;
+    private bool isFired = false;
 
     private void Start()
     {
@@ -29,14 +29,17 @@ public class EnemySpitter : EnemyAI
         if (isLooking)
         {
             this.transform.LookAt(player.transform);
-            yield return new WaitForSeconds(timer);
-            bulletClone = Instantiate(bullet, bulletPoint.position, bullet.transform.rotation);
-            isLooking = false;
-            timer = 3f;
+            yield return new WaitForSeconds(3f);
+            if(!isFired)
+            {
+                bulletClone = Instantiate(bullet, bulletPoint.position, bullet.transform.rotation);
+                isFired = true;
+            }
             Destroy(bulletClone,5);
-            yield return new WaitForSecondsRealtime(6);
+            isLooking = false;
         }
-        yield return new WaitForSeconds(timer);
+        yield return new WaitForSeconds(3f);
+        isFired = false;
         isLooking = true;
     }
 }
