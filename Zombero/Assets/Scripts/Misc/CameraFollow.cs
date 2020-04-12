@@ -11,7 +11,7 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        _cameraPos.x = _player.transform.position.x;
+        //_cameraPos.x = _player.transform.position.x;
         _cameraPos.y = _player.transform.position.y + _yOffset;
         _cameraPos.z = _player.transform.position.z + _zOffset;
         transform.position = _cameraPos;
