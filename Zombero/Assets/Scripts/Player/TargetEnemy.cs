@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 public class TargetEnemy : MonoBehaviour
@@ -28,12 +29,15 @@ public class TargetEnemy : MonoBehaviour
         {
             return;
         }
+        enemy.GetComponentInChildren<Canvas>().GetComponentInChildren<Image>().enabled = false;
+
         //enemy.GetComponent<MeshRenderer>().material.color = Color.white;
     }
 
     private void EnableTarged(Enemy enemy)
     {
         DisableTargeted(lastTargetEnemy);
+        enemy.GetComponentInChildren<Canvas>().GetComponentInChildren<Image>().enabled = true;
         //enemy.GetComponent<MeshRenderer>().material.color = Color.green;
         lastTargetEnemy = enemy;
     }

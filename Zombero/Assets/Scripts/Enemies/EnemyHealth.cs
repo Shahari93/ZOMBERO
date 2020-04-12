@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class EnemyHealth : Enemy
 {
     public event Action<float> OnHealthPctChanged = delegate { };
     EnemyFlash enemyFlash = null;
+    [SerializeField] Canvas redArrow;
     private void Awake()
     {
         enemyFlash = FindObjectOfType<EnemyFlash>();
         currentHealth = health;
+        redArrow.GetComponentInChildren<Image>().enabled = false;
     }
 
     public void ModifyHealth(int amount)
