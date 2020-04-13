@@ -8,11 +8,9 @@ using UnityEngine.UI;
 public class EnemyHealth : Enemy
 {
     public event Action<float> OnHealthPctChanged = delegate { };
-    EnemyFlash enemyFlash = null;
-    [SerializeField] Canvas redArrow;
+    [SerializeField] Canvas redArrow = null;
     private void Awake()
     {
-        enemyFlash = FindObjectOfType<EnemyFlash>();
         currentHealth = health;
         redArrow.GetComponentInChildren<Image>().enabled = false;
     }
@@ -30,14 +28,12 @@ public class EnemyHealth : Enemy
         {
             ModifyHealth(-5);
             other.gameObject.SetActive(false);
-            //StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
             RemoveWhenHealthLow();
         }
 
         if (other.gameObject.CompareTag("Sword"))
         {
             ModifyHealth(-15);
-            //StartCoroutine(enemyFlash.FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.white, Color.red, 1f, .5f));
             RemoveWhenHealthLow();
         }
     }

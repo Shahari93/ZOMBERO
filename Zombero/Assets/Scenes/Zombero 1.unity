@@ -143,6 +143,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4587987928743622922, guid: b5ef04281b53f714c9681f2d76ec88ab,
         type: 3}
+    - target: {fileID: 1274927335, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
+      propertyPath: playerRender
+      value: 
+      objectReference: {fileID: 1392545022}
+    - target: {fileID: 1274927335, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
+      propertyPath: blink
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1274927335, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
+      propertyPath: immuned
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1424577783, guid: 0372eca117b362b48a4431fbe084aead, type: 3}
       propertyPath: floatingJoystick
       value: 
@@ -616,6 +628,12 @@ MonoBehaviour:
 --- !u!1 &1392545015 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4412987286629349610, guid: 0372eca117b362b48a4431fbe084aead,
+    type: 3}
+  m_PrefabInstance: {fileID: 112237165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1392545022 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4412987286629349588, guid: 0372eca117b362b48a4431fbe084aead,
     type: 3}
   m_PrefabInstance: {fileID: 112237165}
   m_PrefabAsset: {fileID: 0}

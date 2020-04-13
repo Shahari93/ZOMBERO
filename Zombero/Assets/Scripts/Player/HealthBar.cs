@@ -7,6 +7,11 @@ public class HealthBar : MonoBehaviour
 {
     static int _health = 500; 
     static private int current = 500;
+    public float blink;
+    public float immuned;
+    private float blinkTime = 0.1f;
+    private float immunedTime;
+    [SerializeField]  Renderer playerRender = null;
     [SerializeField] Image _healthBar = null;
     [SerializeField] Text healthText = null;
 
@@ -15,28 +20,31 @@ public class HealthBar : MonoBehaviour
         current = _health;
     }
 
+    #region collision
     private void OnCollisionEnter(Collision collision)
     {
     if(collision.gameObject.CompareTag("Enemy"))
         {
-            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             PlayerDamageDealt(Random.Range(3,16));
         } 
     }
-
     private void OnTriggerExit(Collider other)
     {
         if(other.gameObject.CompareTag("HandCollider"))
         {
-            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             PlayerDamageDealt(Random.Range(5, 11));
         }
         if(other.gameObject.CompareTag("EnemyBullet"))
         {
-            StartCoroutine(FlashObject(this.gameObject.GetComponent<MeshRenderer>(), Color.red, Color.red, 1f, .5f));
             PlayerDamageDealt(Random.Range(5, 11));
             Destroy(other.gameObject);
         }
+    }
+    #endregion 
+
+    private void Update()
+    {
+        Immune();
     }
 
     public void PlayerDamageDealt(int _howMuchDamage) // can be used for the player and npc
@@ -50,27 +58,43 @@ public class HealthBar : MonoBehaviour
                 current = 0;
                 healthText.text = current.ToString();
             }
-    }
 
-    IEnumerator FlashObject(MeshRenderer toFlash, Color originalColor, Color flashColor, float flashTime, float flashSpeed)
-    {
-        float flashingFor = 0;
-        var newColor = flashColor;
-        while (flashingFor < flashTime)
+        if (immunedTime <= 0)
         {
-            toFlash.material.color = newColor;
-            flashingFor += Time.deltaTime;
-            yield return new WaitForSeconds(flashSpeed);
-            flashingFor += flashSpeed;
-            if (newColor == flashColor)
+
+            current -= _howMuchDamage;
+
+            if (current <= 0)
             {
-                newColor = originalColor;
+
             }
             else
             {
-                newColor = flashColor;
+                immunedTime = immuned;
+                playerRender.enabled = false;
+                blinkTime = blink;
             }
         }
-        this.gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+    }
+
+    private void Immune()
+    {
+        if (immunedTime > 0)
+        {
+
+            immunedTime -= Time.deltaTime;
+
+            blinkTime -= Time.deltaTime;
+
+            if (blinkTime <= 0)
+            {
+                playerRender.enabled = !playerRender.enabled;
+                blinkTime = blink;
+            }
+            if (immunedTime <= 0)
+            {
+                playerRender.enabled = true;
+            }
+        }
     }
 }
