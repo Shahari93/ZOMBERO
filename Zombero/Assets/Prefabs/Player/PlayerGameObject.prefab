@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2691361967595643371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2691361967595643370}
+  - component: {fileID: 8263469599108945239}
+  - component: {fileID: 382042528890955130}
+  - component: {fileID: 897820446578134585}
+  - component: {fileID: 7621788070860092455}
+  - component: {fileID: 9087775662593772370}
+  - component: {fileID: 7127342889868157167}
+  m_Layer: 0
+  m_Name: PlayerGameObject
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2691361967595643370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09, y: 31.58, z: -40.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6986248108152092731}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8263469599108945239
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &382042528890955130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5220649, y: 1.71068, z: 0.59617615}
+  m_Center: {x: -0.081285864, y: 0.10636616, z: -0.20191193}
+--- !u!114 &897820446578134585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be4dc28ac8842a4f8d03cf87de47c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovement: 5
+  _rotationSpeed: 50
+  floatingJoystick: {fileID: 0}
+  rb: {fileID: 8263469599108945239}
+--- !u!114 &7621788070860092455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1220e113da2cb343b992e7c854ff968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9087775662593772370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6fc2865e3d2744d94a354bf0dad769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7127342889868157167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a600ab55d2c4b47958602d7568f837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blink: 0
+  immuned: 0
+  _healthBar: {fileID: 3107070686560405050}
+  healthText: {fileID: 395363799448686340}
+--- !u!1001 &2691361966677400899
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2691361967595643370}
+    m_Modifications:
+    - target: {fileID: 3576182292804676470, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: floatingJoystick
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576182292804676470, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: weaponButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.11200002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.77000046
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.099998474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082984669000134890, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356104788382652267, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+        type: 3}
+      propertyPath: m_Name
+      value: The Adventurer Blake
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a32b89e71fbd51d4d9b3d270682a75ce, type: 3}
+--- !u!4 &6986248108152092731 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5020810793632654712, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2691361966677400899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3107070686560405050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1028838459902253945, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2691361966677400899}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &395363799448686340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2316325980286587463, guid: a32b89e71fbd51d4d9b3d270682a75ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2691361966677400899}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

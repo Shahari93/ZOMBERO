@@ -10,7 +10,7 @@ public class PlayerMovement : StatsManager
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); // get the Rigidbody component from the gameobject
+        //rb = GetComponent<Rigidbody>(); // get the Rigidbody component from the gameobject
         rb.freezeRotation = true; // stop all rotation on the axis
     }
 

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour 
 {
-    static int _health = 500; 
-    static private int current = 500;
     public float blink;
     public float immuned;
     private float blinkTime = 0.1f;
     private float immunedTime;
-    [SerializeField]  Renderer playerRender = null;
+    static int _health = 500; 
+    static private int current = 500;
+    //[SerializeField]  SkinnedMeshRenderer playerRender = null;
     [SerializeField] Image _healthBar = null;
     [SerializeField] Text healthText = null;
 
@@ -64,14 +64,10 @@ public class HealthBar : MonoBehaviour
 
             current -= _howMuchDamage;
 
-            if (current <= 0)
-            {
-
-            }
-            else
+            if (current > 0)
             {
                 immunedTime = immuned;
-                playerRender.enabled = false;
+                //playerRender.enabled = false;
                 blinkTime = blink;
             }
         }
@@ -88,13 +84,13 @@ public class HealthBar : MonoBehaviour
 
             if (blinkTime <= 0)
             {
-                playerRender.enabled = !playerRender.enabled;
+                //playerRender.enabled = !playerRender.enabled;
                 blinkTime = blink;
             }
-            if (immunedTime <= 0)
+            /*if (immunedTime <= 0)
             {
                 playerRender.enabled = true;
-            }
+            }*/
         }
     }
 }
