@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8263469599108945239}
   - component: {fileID: 382042528890955130}
   - component: {fileID: 897820446578134585}
-  - component: {fileID: 7621788070860092455}
   - component: {fileID: 9087775662593772370}
   - component: {fileID: 7127342889868157167}
+  - component: {fileID: 8319205806218561926}
   m_Layer: 0
   m_Name: PlayerGameObject
   m_TagString: Player
@@ -82,18 +82,6 @@ MonoBehaviour:
   _rotationSpeed: 50
   floatingJoystick: {fileID: 0}
   rb: {fileID: 8263469599108945239}
---- !u!114 &7621788070860092455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2691361967595643371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1220e113da2cb343b992e7c854ff968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &9087775662593772370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +110,18 @@ MonoBehaviour:
   immuned: 0
   _healthBar: {fileID: 3107070686560405050}
   healthText: {fileID: 395363799448686340}
+--- !u!114 &8319205806218561926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2691361967595643371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a9886ccf1061bb49b6fd2d977b24004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2691361966677400899
 PrefabInstance:
   m_ObjectHideFlags: 0
