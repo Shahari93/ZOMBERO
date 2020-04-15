@@ -81,7 +81,7 @@ MonoBehaviour:
   attackSpeed: 2
   player: {fileID: 0}
   enemyAnimator: {fileID: 746082362}
-  stoppingDis: 1.5
+  stoppingDis: 1
 --- !u!65 &4108463893067538041
 BoxCollider:
   m_ObjectHideFlags: 0
