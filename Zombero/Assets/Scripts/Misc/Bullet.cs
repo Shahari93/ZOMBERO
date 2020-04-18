@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     private static float currentTimer;
     [SerializeField] FloatingJoystick floatingJoystick = null;
     [SerializeField] SwitchWeaponsButton weaponButton = null;
+    [SerializeField] AudioSource bulletAudioSource = null;
 
     private void Awake()
     {
@@ -31,6 +32,7 @@ public class Bullet : MonoBehaviour
                 {
                     bullet.transform.position = this.transform.position;
                     bullet.transform.eulerAngles = this.transform.parent.eulerAngles; // takes to rotation angle of the parent object
+                    bulletAudioSource.Play();
                     bullet.SetActive(true);
                     currentTimer = timer;
                 }

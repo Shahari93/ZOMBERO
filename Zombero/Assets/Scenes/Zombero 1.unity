@@ -1261,10 +1261,15 @@ PrefabInstance:
       propertyPath: floatingJoystick
       value: 
       objectReference: {fileID: 931792859}
-    - target: {fileID: 1044307769163961665, guid: 4991e67e0fec7164cba46ff009b49e6d,
+    - target: {fileID: 897820446578134585, guid: 4991e67e0fec7164cba46ff009b49e6d,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: runningAudioSource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060671734195653670, guid: 4991e67e0fec7164cba46ff009b49e6d,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1511104640432191029, guid: 4991e67e0fec7164cba46ff009b49e6d,
         type: 3}
@@ -1276,11 +1281,6 @@ PrefabInstance:
       propertyPath: weaponButton
       value: 
       objectReference: {fileID: 9105059915661604969}
-    - target: {fileID: 1511104640432191029, guid: 4991e67e0fec7164cba46ff009b49e6d,
-        type: 3}
-      propertyPath: timer
-      value: 0.9
-      objectReference: {fileID: 0}
     - target: {fileID: 2691361967595643370, guid: 4991e67e0fec7164cba46ff009b49e6d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1341,34 +1341,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerGameObject
       objectReference: {fileID: 0}
-    - target: {fileID: 2691361967595643371, guid: 4991e67e0fec7164cba46ff009b49e6d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5121281570837622185, guid: 4991e67e0fec7164cba46ff009b49e6d,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
-    - target: {fileID: 6246345878239480360, guid: 4991e67e0fec7164cba46ff009b49e6d,
+    - target: {fileID: 7136318125155472618, guid: 4991e67e0fec7164cba46ff009b49e6d,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127342889868157167, guid: 4991e67e0fec7164cba46ff009b49e6d,
-        type: 3}
-      propertyPath: playerRender
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127342889868157167, guid: 4991e67e0fec7164cba46ff009b49e6d,
-        type: 3}
-      propertyPath: blink
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7127342889868157167, guid: 4991e67e0fec7164cba46ff009b49e6d,
+    - target: {fileID: 7136318125155472618, guid: 4991e67e0fec7164cba46ff009b49e6d,
         type: 3}
-      propertyPath: immuned
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f7e54775f4b2f804683f569a50460107, type: 3}
+    - target: {fileID: 7136318125155472618, guid: 4991e67e0fec7164cba46ff009b49e6d,
+        type: 3}
+      propertyPath: Loop
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1503,6 +1493,11 @@ PrefabInstance:
     - target: {fileID: 9105059915661604969, guid: 47897b6756618e745a3cb75c4c7051b0,
         type: 3}
       propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 492961852}
+    - target: {fileID: 9105059915661604969, guid: 47897b6756618e745a3cb75c4c7051b0,
+        type: 3}
+      propertyPath: buttonAudioSource
       value: 
       objectReference: {fileID: 492961852}
     m_RemovedComponents: []

@@ -11,9 +11,12 @@ public class HealthBar : MonoBehaviour
     private float immunedTime;
     static int _health = 500; 
     static private int current = 500;
-    //[SerializeField]  SkinnedMeshRenderer playerRender = null;
+    [SerializeField]  Renderer playerRender = null;
+    [SerializeField]  Renderer gunRender = null;
+    [SerializeField]  Renderer magazineRender = null;
     [SerializeField] Image _healthBar = null;
     [SerializeField] Text healthText = null;
+    [SerializeField] AudioSource gettingHitAudioSource = null;
 
     private void Awake()
     {
@@ -67,8 +70,11 @@ public class HealthBar : MonoBehaviour
             if (current > 0)
             {
                 immunedTime = immuned;
-                //playerRender.enabled = false;
+                playerRender.enabled = false;
+                gunRender.enabled = false;
+                magazineRender.enabled = false;
                 blinkTime = blink;
+                gettingHitAudioSource.Play();
             }
         }
     }
@@ -77,20 +83,21 @@ public class HealthBar : MonoBehaviour
     {
         if (immunedTime > 0)
         {
-
             immunedTime -= Time.deltaTime;
-
             blinkTime -= Time.deltaTime;
-
             if (blinkTime <= 0)
             {
-                //playerRender.enabled = !playerRender.enabled;
+                playerRender.enabled = !playerRender.enabled;
+                gunRender.enabled = !gunRender.enabled;
+                magazineRender.enabled = !magazineRender.enabled;
                 blinkTime = blink;
             }
-            /*if (immunedTime <= 0)
+            if (immunedTime <= 0)
             {
                 playerRender.enabled = true;
-            }*/
+                gunRender.enabled = true;
+                magazineRender.enabled = true;
+            }
         }
     }
 }

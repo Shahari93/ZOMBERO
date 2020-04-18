@@ -8,7 +8,7 @@ public class SwitchWeaponsButton : Machete
     public GameObject rangeGO = null, meleeGO = null, swordGO = null;
     [SerializeField]float timer;
     [SerializeField]bool isTimerActive = false;
-    [SerializeField] AudioSource audioSource = null;
+    [SerializeField] AudioSource buttonAudioSource = null;
     private void Awake()
     {
         swordGO.SetActive(false);
@@ -43,7 +43,7 @@ public class SwitchWeaponsButton : Machete
             swordGO.SetActive(true);
             FindObjectOfType<PlayerMovement>()._playerMovement -= 2;
             SetColor();
-            audioSource.Play();
+            buttonAudioSource.Play();
         }
         else if(meleeGO.activeInHierarchy)
         {
@@ -52,7 +52,7 @@ public class SwitchWeaponsButton : Machete
             swordGO.SetActive(false);
             FindObjectOfType<PlayerMovement>()._playerMovement += 2;
             SetColor();
-            audioSource.Play();
+            buttonAudioSource.Play();
         }
     }
 
