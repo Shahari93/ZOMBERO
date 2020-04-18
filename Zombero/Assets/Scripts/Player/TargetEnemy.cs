@@ -17,9 +17,9 @@ public class TargetEnemy : MonoBehaviour
     private void ShowTargetedEnemy()
     {
         Enemy enemy = FindObjectsOfType<Enemy>().OrderBy(t => Vector3.Distance(transform.position, t.transform.position)).FirstOrDefault();
-        if(enemy!=null)
+        if (enemy != null)
         {
-            EnableTarged(enemy);
+                EnableTarged(enemy);
         }
     }
 
@@ -27,7 +27,7 @@ public class TargetEnemy : MonoBehaviour
     {
         if(enemy == null)
         {
-            return;
+                return;
         }
         enemy.GetComponentInChildren<Canvas>().GetComponentInChildren<Image>().enabled = false;
     }
