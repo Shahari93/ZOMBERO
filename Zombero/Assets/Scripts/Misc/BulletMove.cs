@@ -14,6 +14,7 @@ public class BulletMove : MonoBehaviour
 {
     [SerializeField] Vector3 _speed =new Vector3(0,0,0);
     [SerializeField] GameObject bPrefab = null;
+
     private void FixedUpdate()
     {
         bPrefab.transform.Translate(_speed * Time.deltaTime);

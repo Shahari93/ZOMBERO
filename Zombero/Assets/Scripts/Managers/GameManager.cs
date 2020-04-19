@@ -4,10 +4,11 @@ using UnityEngine;
 
 public sealed class GameManager 
 {
-
     private static GameManager instance;
     private List<GameObject> enemies = new List<GameObject>();
     public List<GameObject> Enemies { get { return enemies; } }
+    public bool isEnemiesLeft = false;
+
 
     public static GameManager Singleton // create instance of game manger
     { 
@@ -37,6 +38,7 @@ public sealed class GameManager
     {
         if(enemies.Count<=0)
         {
+            isEnemiesLeft = true;
             door.gameObject.GetComponent<BoxCollider>().isTrigger = true;
         }
     }

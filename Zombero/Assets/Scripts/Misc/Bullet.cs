@@ -39,6 +39,7 @@ public class Bullet : MonoBehaviour
                 if (GameManager.Singleton.Enemies.Count <= 0 || !weaponButton.rangeGO.activeInHierarchy) // stop shooting if there are no enemies on screen
                 {
                     bullet.SetActive(false);
+                    bulletAudioSource.Stop();
                 }
             }
         }
