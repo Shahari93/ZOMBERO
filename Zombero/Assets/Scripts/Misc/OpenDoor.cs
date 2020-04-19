@@ -6,14 +6,12 @@ using UnityEngine.SceneManagement;
 public class OpenDoor : MonoBehaviour
 {
 
-    [SerializeField] Sprite closedDoor = null;
     [SerializeField] Sprite openedDoor = null;
     [SerializeField] AudioSource openDoorAudio = null;
 
     private void Awake()
     {
         GameObject door = GameObject.FindGameObjectWithTag("door"); // add the door as a game object
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = closedDoor;
     }
     private void Update()
     {
@@ -24,10 +22,10 @@ public class OpenDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Zombero 1");
+            SceneManager.LoadScene("Zombero 2");
         }
     }
-    IEnumerator OpenDoorCoroutine(Sprite newDoor)
+     IEnumerator OpenDoorCoroutine(Sprite newDoor)
     {
         if(GameManager.Singleton.isEnemiesLeft)
         {

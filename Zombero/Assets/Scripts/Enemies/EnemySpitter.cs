@@ -8,6 +8,7 @@ public class EnemySpitter : EnemyAI
     [SerializeField] Transform player = null;
     [SerializeField] GameObject bullet = null;
     [SerializeField] Transform bulletPoint = null;
+    [SerializeField] AudioSource bulletAudio = null;
     private bool isLooking = true;
     private bool isFired = false;
 
@@ -33,6 +34,7 @@ public class EnemySpitter : EnemyAI
             if(!isFired)
             {
                 bulletClone = Instantiate(bullet, bulletPoint.position, bullet.transform.rotation);
+                bulletAudio.Play();
                 isFired = true;
             }
             Destroy(bulletClone,20);

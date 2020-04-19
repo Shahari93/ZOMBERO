@@ -7,9 +7,11 @@ using UnityEngine;
 public class Machete : MonoBehaviour, IFindEnemies
 {
     Animator _macheteAnimator;
+    [SerializeField] AudioSource macheteAudio = null;
     private void Start()
     {
         _macheteAnimator = gameObject.GetComponent<Animator>();
+        macheteAudio = gameObject.GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -34,12 +36,14 @@ public class Machete : MonoBehaviour, IFindEnemies
                 if (disToEnemy < 3)
                 {
                     _macheteAnimator.SetBool("isEnemyClose", true);
+                    macheteAudio.Play();
                     Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color = Color.red;
                 }
                 else if (disToEnemy>=3)
                 {
                     _macheteAnimator.SetBool("isEnemyClose", false);
                     Machete.FindObjectOfType<Machete>().GetComponent<MeshRenderer>().material.color = Color.blue;
+                    macheteAudio.Stop();
                 }
             }
         }

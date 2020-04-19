@@ -22,7 +22,7 @@ public class EnemyWalker : EnemyAI
             transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position,speed * Time.deltaTime);
             enemyAnimator.SetBool("isClose", false);
         }
-        if(Vector3.Distance(this.transform.position,player.transform.position)<=stoppingDis)
+        if (Vector3.Distance(this.transform.position,player.transform.position)<=stoppingDis)
         {
             enemyAnimator.SetBool("isClose", true);
         }
