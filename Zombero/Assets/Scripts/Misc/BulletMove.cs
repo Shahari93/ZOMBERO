@@ -22,4 +22,11 @@ public class BulletMove : MonoBehaviour
     {
         this.gameObject.SetActive(false); // setting the bullet to be inactive when they leave the screen. when the became invisable they go back to the object pool
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }
