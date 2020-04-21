@@ -3,7 +3,14 @@ using System.Collections.Generic;
 
 public class ZombieCharacterControl : MonoBehaviour
 {
-    private enum ControlMode
+    [SerializeField] private AudioSource zombieAttackSound = null;
+    public void PlayAttackSound()
+    {
+        zombieAttackSound.Play();
+    }
+}
+/*
+     private enum ControlMode
     {
         /// <summary>
         /// Up moves the character forward, left and right turn the character gradually and down moves the character backwards
@@ -93,5 +100,4 @@ public class ZombieCharacterControl : MonoBehaviour
 
             m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }
-    }
-}
+    }*/
