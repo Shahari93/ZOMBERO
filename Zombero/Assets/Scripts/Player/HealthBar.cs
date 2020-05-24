@@ -21,29 +21,7 @@ public class HealthBar : MonoBehaviour
     private void Awake()
     {
         current = _health;
-    }
-
-    #region collision
-    private void OnCollisionEnter(Collision collision)
-    {
-    if(collision.gameObject.CompareTag("Enemy"))
-        {
-            PlayerDamageDealt(Random.Range(3,16));
-        } 
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.CompareTag("HandCollider"))
-        {
-            PlayerDamageDealt(Random.Range(5, 11));
-        }
-        if(other.gameObject.CompareTag("EnemyBullet"))
-        {
-            PlayerDamageDealt(Random.Range(5, 11));
-            Destroy(other.gameObject);
-        }
-    }
-    #endregion 
+    } 
 
     private void Update()
     {
