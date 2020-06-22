@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerCollisionScript : MonoBehaviour
 {
-
     [SerializeField] PlayerScript playerScript = null;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))

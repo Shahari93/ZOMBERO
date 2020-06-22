@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] internal float blinkTime = 0.1f;
     [SerializeField] internal float immunedTime = 0f;
 
+    [Header("Components serialization")]
     [SerializeField] internal Renderer playerRender = null;
     [SerializeField] internal Renderer gunRender = null;
     [SerializeField] internal Renderer magazineRender = null;

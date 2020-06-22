@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 990230645361355072}
   - component: {fileID: 990230645361355074}
   - component: {fileID: 990230645361355101}
+  - component: {fileID: 7823787634761449803}
   m_Layer: 0
   m_Name: SpitterZombieGameObject
   m_TagString: Enemy
@@ -96,6 +97,26 @@ MonoBehaviour:
   player: {fileID: 0}
   bullet: {fileID: 1994603721485493620, guid: 0c2fdc1722c050b4e946c4f8ad10a8f1, type: 3}
   bulletPoint: {fileID: 0}
+  bulletAudio: {fileID: 0}
+--- !u!95 &7823787634761449803
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990230645361355103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 08a6fb37a2f216e47bdfa76dcbe8f35e, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &990230645444771113
 PrefabInstance:
   m_ObjectHideFlags: 0
