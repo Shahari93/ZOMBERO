@@ -16,7 +16,7 @@ public class TargetPlayer : MonoBehaviour
         player = FindObjectOfType<PlayerMovement>();
         enemySpitter = FindObjectOfType<EnemySpitter>();
         playerPos = player.transform.position;
-        moveDir = (playerPos - transform.position).normalized * enemySpitter.attackSpeed;
+        moveDir = (playerPos - transform.position).normalized * 15f;
         bulletRB.velocity = new Vector3(moveDir.x, moveDir.y, moveDir.z);
     }
 }

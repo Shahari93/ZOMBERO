@@ -7,6 +7,7 @@ public class EventsMainClass : MonoBehaviour
 {
     public static Action weaponSwitch;
     public static Action activateTimer;
+    public static Action<Sprite> allEnemiesAreDead;
 
     public void OnWeaponSwitch()
     {

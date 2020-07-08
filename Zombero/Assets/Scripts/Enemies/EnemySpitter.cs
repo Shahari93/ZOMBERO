@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpitter : EnemyAI
+public class EnemySpitter : MonoBehaviour
 {
     GameObject bulletClone;
     [SerializeField] Transform player = null;

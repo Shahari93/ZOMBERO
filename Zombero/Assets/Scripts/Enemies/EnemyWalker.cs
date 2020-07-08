@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class EnemyWalker : EnemyAI
+public class EnemyWalker : MonoBehaviour
 {
     [SerializeField] private GameObject player = null;
     [SerializeField] private Animator enemyAnimator = null;
     [SerializeField] private float stoppingDis = 1.5f;
+    public float speed;
+    public float attackSpeed;
 
     private void Update()
     {
         Attack();        
     }
 
-    public override void Attack()
+    private void Attack()
     {
         this.transform.LookAt(player.transform);
         if(Vector3.Distance(this.transform.position, player.transform.position)>stoppingDis)
