@@ -21,10 +21,6 @@ public class EnemySpitter : EnemyAI
     {
         StartCoroutine(Spit());
     }
-
-    public override void Attack()
-    {
-    }
     private IEnumerator Spit()
     {
         if (isLooking)

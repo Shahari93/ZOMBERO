@@ -5,33 +5,19 @@ using UnityEngine.UI;
 
 public class SwitchWeaponsButton : Machete
 {
-    public GameObject rangeGO = null, meleeGO = null, swordGO = null;
-    [SerializeField]float timer;
-    [SerializeField]bool isTimerActive = false;
+    public GameObject rangeGO = null, meleeGO = null, swordGO = null; 
     [SerializeField] AudioSource buttonAudioSource = null;
+    [SerializeField] TimerForWeaponSwitch timer = null;
+
     private void Awake()
     {
+        EventsMainClass.weaponSwitch += OnWeaponSwitchButtonPressed;
         swordGO.SetActive(false);
     }
 
     private void Update()
     {
         TimerForButton();
-    }
-
-    void Timer() // method for a timer to count backwards from X to 0
-    {
-        if (isTimerActive)
-        {
-            timer -= Time.deltaTime;
-            if(timer<=0)
-            {
-                timer = 0;
-                isTimerActive = false;
-                this.gameObject.GetComponent<Button>().enabled = true; // sets the button to true
-                this.gameObject.GetComponent<Image>().color = Color.blue; // set the button color to blue
-            }
-        }
     }
 
     public void OnWeaponSwitchButtonPressed()
@@ -60,24 +46,19 @@ public class SwitchWeaponsButton : Machete
     {
         if(rangeGO.activeInHierarchy)
         {
-            ActivateTimer();
+           timer.ActivateTimer();
         }
 
         else if (meleeGO.activeInHierarchy)
         {
-            ActivateTimer();
+            timer.ActivateTimer();
         }
     }
-    void ActivateTimer()
-    {
-        isTimerActive = true;
-        this.gameObject.GetComponent<Button>().enabled = false;
-        Timer();
-    }
+
 
     void SetColor()
     {
         this.gameObject.GetComponent<Image>().color = Color.gray;
-        timer = 5f;
+        timer.timer = 5f;
     }
 }

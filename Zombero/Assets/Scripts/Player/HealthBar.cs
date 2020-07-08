@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class HealthBar : MonoBehaviour 
 {
@@ -22,11 +23,12 @@ public class HealthBar : MonoBehaviour
 
     public void PlayerDamageDealt(int _howMuchDamage) // can be used for the player and npc
     {
-            float fillAmount = (float)current / (float)_health;
-            current = current - _howMuchDamage;
-            playerScript._healthBar.fillAmount = fillAmount;
-            playerScript.healthText.text = current.ToString();
-            if(current<=0)
+        _howMuchDamage = 5;
+        float fillAmount = (float)current / (float)_health;
+        current = current - _howMuchDamage;
+        playerScript._healthBar.fillAmount = fillAmount;
+        playerScript.healthText.text = current.ToString();
+        if (current<=0)
             {
                 current = 0;
             playerScript.healthText.text = current.ToString();

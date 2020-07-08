@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerCollisionScript : MonoBehaviour
 {
@@ -10,18 +11,18 @@ public class PlayerCollisionScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-           playerScript.healthBarScript.PlayerDamageDealt(Random.Range(3, 16));
+            playerScript.healthBarScript.PlayerDamageDealt(UnityEngine.Random.Range(5, 11));
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("HandCollider"))
         {
-            playerScript.healthBarScript.PlayerDamageDealt(Random.Range(5, 11));
+            playerScript.healthBarScript.PlayerDamageDealt(UnityEngine.Random.Range(5, 11));
         }
         if (other.gameObject.CompareTag("EnemyBullet"))
         {
-            playerScript.healthBarScript.PlayerDamageDealt(Random.Range(5, 11));
+            playerScript.healthBarScript.PlayerDamageDealt(UnityEngine.Random.Range(5, 11));
             Destroy(other.gameObject);
         }
     }
