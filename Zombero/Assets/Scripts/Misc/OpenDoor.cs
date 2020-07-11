@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class OpenDoor : MonoBehaviour
 {
-
     [SerializeField] Sprite openedDoor = null;
     [SerializeField] AudioSource openDoorAudio = null;
 
@@ -13,6 +12,7 @@ public class OpenDoor : MonoBehaviour
     {
         GameObject door = GameObject.FindGameObjectWithTag("door"); // add the door as a game object
     }
+
     private void Update()
     {
         GameManager.Singleton.OpenDoors(this.gameObject); // uses the game manager method to open the door.
@@ -26,12 +26,12 @@ public class OpenDoor : MonoBehaviour
         }
     }
      IEnumerator OpenDoorCoroutine(Sprite newDoor)
-    {
+     {
         if(GameManager.Singleton.isEnemiesLeft)
         {
             openDoorAudio.Play();
             yield return new WaitForSecondsRealtime(.5f);
             this.GetComponent<SpriteRenderer>().sprite = newDoor;
         }
-    }
+     }
 }

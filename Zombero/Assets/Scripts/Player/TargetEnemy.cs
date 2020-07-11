@@ -6,12 +6,11 @@ using System.Linq;
 
 public class TargetEnemy : MonoBehaviour
 {
-
     Enemy lastTargetEnemy;
 
     private void Update()
     {
-        ShowTargetedEnemy();    
+      ShowTargetedEnemy();    
     }
 
     private void ShowTargetedEnemy()
@@ -19,23 +18,23 @@ public class TargetEnemy : MonoBehaviour
         Enemy enemy = FindObjectsOfType<Enemy>().OrderBy(t => Vector3.Distance(transform.position, t.transform.position)).FirstOrDefault();
         if (enemy != null)
         {
-                EnableTarged(enemy);
+          EnableTarged(enemy);
         }
     }
 
      private void DisableTargeted(Enemy enemy)
-    {
+     {
         if(enemy == null)
         {
-                return;
+          return;
         }
         enemy.GetComponentInChildren<Canvas>().GetComponentInChildren<Image>().enabled = false;
-    }
+     }
 
     private void EnableTarged(Enemy enemy)
     {
-        DisableTargeted(lastTargetEnemy);
-        enemy.GetComponentInChildren<Canvas>().GetComponentInChildren<Image>().enabled = true;
-        lastTargetEnemy = enemy;
+      DisableTargeted(lastTargetEnemy);
+      enemy.GetComponentInChildren<Canvas>().GetComponentInChildren<Image>().enabled = true;
+      lastTargetEnemy = enemy;
     }
 }

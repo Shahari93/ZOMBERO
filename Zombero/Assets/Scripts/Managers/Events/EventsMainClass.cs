@@ -6,15 +6,16 @@ using UnityEngine;
 public class EventsMainClass : MonoBehaviour
 {
     public static Action weaponSwitch;
-    public static Action activateTimer;
-    public static Action<Sprite> allEnemiesAreDead;
+    public static Action openDoor;
 
     public void OnWeaponSwitch()
     {
         weaponSwitch?.Invoke();
     }
-    public void OnActiveTimer()
+
+    public void OpenLevelDoor()
     {
-        activateTimer?.Invoke();
+        openDoor?.Invoke();
+        Debug.Log("Door Is Open");
     }
 }

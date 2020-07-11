@@ -9,7 +9,6 @@ public sealed class GameManager
     public List<GameObject> Enemies { get { return enemies; } }
     public bool isEnemiesLeft = false;
 
-
     public static GameManager Singleton // create instance of game manger
     { 
         get
@@ -38,8 +37,13 @@ public sealed class GameManager
     {
         if(enemies.Count<=0)
         {
-            isEnemiesLeft = true;
             door.gameObject.GetComponent<BoxCollider>().isTrigger = true;
+            isEnemiesLeft = true;
+        }
+        else
+        {
+            door.gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            isEnemiesLeft = false;
         }
     }
 
