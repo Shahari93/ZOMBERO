@@ -9,13 +9,14 @@ public class Bullet : MonoBehaviour
     [SerializeField] FloatingJoystick floatingJoystick = null;
     [SerializeField] SwitchWeaponsButton weaponButton = null;
     [SerializeField] AudioSource bulletAudioSource = null;
-
+    RaycastHit hit;
+    int layerMask = 1 << 8;
     private void Awake()
     {
         currentTimer = timer;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         currentTimer -= Time.deltaTime;
         PlayerShoot();
@@ -23,8 +24,10 @@ public class Bullet : MonoBehaviour
 
     private void PlayerShoot()
     {
-        if (floatingJoystick.Vertical == 0 && floatingJoystick.Horizontal == 0)
+        
+        if (floatingJoystick.Vertical == 0 && floatingJoystick.Horizontal == 0 && Physics.Raycast(transform.position,transform.TransformDirection(Vector3.forward),out hit,Mathf.Infinity,layerMask))
         {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             GameObject bullet = BulletPool.singleton.Get("PlayerBullet");
             if (currentTimer<=0)
             {
